@@ -17,9 +17,6 @@ api_url = 'https://foiaonline.gov/foiaonline/api/search/advancedSearch'
 
 def main():
 
-    # request records in time ranges of a week
-    time_range = datetime.timedelta(days=7)
-
     # get the set of record IDs we've already collected so they aren't written again
     seen_ids = get_seen_ids()
 
@@ -29,20 +26,27 @@ def main():
     # get records week by week starting in 2004-03-01 
     # initial probing indicated that the first record was received 2004-03-04
     start = datetime.date(2004, 3, 1)
-    start = datetime.date(2023, 9, 20)
     today = datetime.date.today()
 
+    # request records in time ranges of a week
+    # this isn't the most efficient since the records are so sparse at the beginning
+    # but it was easier than adapting the time slice dynamically based on the record density
+    time_slice = datetime.timedelta(days=7)
+
     while start < today:
-        end = start + time_range
+        end = start + time_slice
 
         # don't search into the future
         if end > today:
             end = today
 
+        print(f'fetching records for {start} - {end}')
         found = get_records(start, end, csrf_token, seen_ids)
         if found == None:
             print(f'hit max 10,000 limit for {start} - {end}')
             break
+        else:
+            print(f'found {found} records for {start} - {end}')
 
         # move on to the next slice of time
         start = end
@@ -131,6 +135,7 @@ def get_seen_ids():
             seen.add(record['id'])
 
     return seen
+
 
 if __name__ == '__main__':
     main()
