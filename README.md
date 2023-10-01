@@ -4,6 +4,10 @@ This repository contains a utility that was used for collecting data from [foiao
 
 The `pull.py` program interacted with the foiaonline.gov [Advanced Search Form] by requesting one week's worth of records at a time, starting on March 1, 2003. This was to get around a result size limit of 10,000 records. It retrieved the JSON from the API that was provided for paging through results. The records retrieved are then written to a JSONL file `data.jsonl`, which was gzipped on completion, and is present here as well.
 
+More about this process can be found in this post:
+
+[https://inkdroid.org/2023/10/01/foiaonline/](https://inkdroid.org/2023/10/01/foiaonline/)
+
 ## Run
 
 ```
