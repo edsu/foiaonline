@@ -74,7 +74,7 @@ def get_records(start, end, csrf_token, seen_ids):
     while True:
 
         # be gentle
-        time.sleep(5)
+        time.sleep(2)
 
         # get the records for this time slice at the given position
         query = {
