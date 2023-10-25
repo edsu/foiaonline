@@ -25,7 +25,9 @@ The resulting `data.jsonl.gz` is provided here for research purposes as it is in
 $ poetry run jupyter lab Notebook.ipynb
 ```
 
-Or you can [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/edsu/foiaonline/blob/main/Notebook.ipynb)
+or, 
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/edsu/foiaonline/blob/main/Notebook.ipynb)
 
 ## Archive Team
 
