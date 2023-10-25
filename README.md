@@ -29,5 +29,6 @@ $ poetry run jupyter lab Notebook.ipynb
 
 The ArchiveTeam and Internet Archive have also done some collecting prior to shutdown which you can find described on [this wiki page](https://wiki.archiveteam.org/index.php/FOIAonline). The resulting WARC data that was collected can be found by [searching](https://archive.org/details/archiveteam-fire?query=foiaonline.gov) the ArchiveTeam Just In Time Grabs collection for "foiaonline.gov".
 
-[^1]: https://www.archives.gov/ogis/resources/foia-ombuds-observer/2023-01
 [Advanced Search form]: https://foiaonline.gov/foiaonline/action/public/search/advancedSearch
+
+[^1]: https://www.archives.gov/ogis/resources/foia-ombuds-observer/2023-01
