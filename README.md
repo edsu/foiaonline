@@ -29,6 +29,8 @@ or
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/edsu/foiaonline/blob/main/Notebook.ipynb)
 
+The Notebook also contains code for seeing what exists in the Internet Archive Wayback Machine for foiaonline.gov. The results of that data are stored in `snapshots.csv.gz`. 
+
 ## Archive Team
 
 The ArchiveTeam and Internet Archive have also done some collecting prior to shutdown which you can find described on [this wiki page](https://wiki.archiveteam.org/index.php/FOIAonline). The resulting WARC data that was collected can be found by [searching](https://archive.org/details/archiveteam-fire?query=foiaonline.gov) the ArchiveTeam Just In Time Grabs collection for "foiaonline.gov".
